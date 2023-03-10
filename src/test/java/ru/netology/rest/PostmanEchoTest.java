@@ -12,12 +12,12 @@ public class PostmanEchoTest {
     void shouldPOSTSomeData() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("some interesting")
+                .body("some interesting data")
         .when()
                 .post("/post")
         .then()
                 .statusCode(200)
-                .body("data", equalTo("some data"))
+                .body("data", equalTo("some interesting data"))
 
         ;
     }
